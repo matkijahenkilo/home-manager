@@ -3,7 +3,8 @@
 {
   stylix = {
     autoEnable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/pasque.yaml";
+    targets.kde.enable = false;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/summercamp.yaml";
     image = ./../assets/bg;
     polarity = "dark";
     cursor = {

@@ -25,8 +25,8 @@
           # the path to your home.nix.
           modules = [
             ./home.nix
-            # stylix.homeManagerModules.stylix
-            # ./modules/stylix.nix
+            stylix.homeManagerModules.stylix
+            ./modules/stylix.nix
             ./modules/neovim.nix
           ];
 
