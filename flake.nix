@@ -24,9 +24,10 @@
           # Specify your home configuration modules here, for example,
           # the path to your home.nix.
           modules = [
-            # stylix.homeManagerModules.stylix
             ./home.nix
-            # ./stylix.nix
+            # stylix.homeManagerModules.stylix
+            # ./modules/stylix.nix
+            ./modules/neovim.nix
           ];
 
           # Optionally use extraSpecialArgs

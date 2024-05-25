@@ -4,7 +4,7 @@
   stylix = {
     autoEnable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/pasque.yaml";
-    image = ./bg.jpg;
+    image = ./../assets/bg;
     polarity = "dark";
     cursor = {
       package = pkgs.banana-cursor;
