@@ -1,6 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
+  imports = [ inputs.stylix.homeManagerModules.stylix ];
   stylix = {
     autoEnable = true;
     targets.kde.enable = false;

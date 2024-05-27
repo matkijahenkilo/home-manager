@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{ pkgs, lib, ... }: {
   programs.neovim =
   let
     toLua = str: "lua << EOF\n${str}\nEOF\n";
@@ -98,5 +96,9 @@
     extraLuaConfig = ''
       ${builtins.readFile ./neovim/options.lua}
     '';
+  };
+
+  home.sessionVariables = {
+    EDITOR = lib.mkDefault "nvim";
   };
 }

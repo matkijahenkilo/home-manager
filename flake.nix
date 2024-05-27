@@ -12,7 +12,7 @@
     stylix.url = "github:danth/stylix";
   };
 
-  outputs = { nixpkgs, home-manager, stylix, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -20,19 +20,11 @@
       homeConfigurations = {
         marisa = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-
-          # Specify your home configuration modules here, for example,
-          # the path to your home.nix.
+          extraSpecialArgs = { inherit inputs; };
           modules = [
             ./home.nix
-            stylix.homeManagerModules.stylix
-            ./modules/stylix.nix
-            ./modules/neovim.nix
           ];
-
-          # Optionally use extraSpecialArgs
-          # to pass through arguments to home.nix
-	      };
+        };
       };
     };
 }
