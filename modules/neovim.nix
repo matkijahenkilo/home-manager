@@ -91,6 +91,7 @@
       nerdcommenter
       tagbar
       vim-fugitive
+      auto-pairs
     ];
 
     extraLuaConfig = ''
