@@ -10,12 +10,16 @@
     };
 
     stylix.url = "github:danth/stylix";
+
+    nixgl.url = "github:nix-community/nixGL";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }:
     let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        system = "x86_64-linux";
+        overlays = [ inputs.nixgl.overlay ];
+      };
     in {
       homeConfigurations = {
         marisa = home-manager.lib.homeManagerConfiguration {
