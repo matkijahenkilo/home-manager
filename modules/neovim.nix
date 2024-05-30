@@ -92,6 +92,17 @@
       tagbar
       vim-fugitive
       auto-pairs
+
+      {
+        plugin = nerdtree;
+        config = ''
+          nnoremap <leader>e :NERDTreeFocus<CR>
+          nnoremap <Space>e :NERDTree<CR>
+          nnoremap <Space>t :NERDTreeToggle<CR>
+          nnoremap <Space>f :NERDTreeFind<CR>
+        '';
+      }
+      vim-devicons
     ];
 
     extraLuaConfig = ''
