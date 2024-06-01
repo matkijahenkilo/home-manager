@@ -1,6 +1,6 @@
 { lib, ... }: {
   programs.kitty = { # requires nixGL which I'm too dumb to make it work
-    enable = false;
+    enable = true;
   };
 
   home.sessionVariables = {

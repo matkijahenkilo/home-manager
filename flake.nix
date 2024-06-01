@@ -17,7 +17,9 @@
   outputs = inputs@{ ... }:
   let
     libs = import ./libs/default.nix { inherit inputs; };
-  in with libs; {
+    mkHost = libs.mkHost;
+    mkHome = libs.mkHome;
+  in {
     nixosConfigurations = {
       tau = mkHost ./hosts/tau/configuration.nix;
     };

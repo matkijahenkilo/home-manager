@@ -2,7 +2,6 @@
   imports = [ inputs.stylix.homeManagerModules.stylix ];
   stylix = {
     autoEnable = true;
-    targets.kde.enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/summercamp.yaml";
     image = ./../assets/bg;
     polarity = "dark";
